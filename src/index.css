@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400&display=swap');
+
+* {
+  margin: 0;
+  padding: 10px;
+  font-family: 'Montserrat', sans-serif;
+  transition: all 0.2s linear;
+}
+
+a {
+   color: #757575;
+   text-decoration: none;
+}
+
+a.selected {
+   color: #202020;
+}
+
+ul {
+   list-style: none;
+}
+
+li {
+   border-radius: 12px;
+   margin: 30px auto;
+   box-shadow: 0 0 30px #ebebeb;
+   cursor: pointer;
+}
+
+.loading {
+   position: fixed;
+   top: 40%;
+   left: 40%;
+   /* transform: translate(-50%, -50%); */
+   /* font-size: 40px; */
+   width: 100px;
+   height: 100px;
+   border: 3px solid #56999f;
+   border-radius: 12px;
+   /* transition: all 0.5s linear; */
+   animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+   0% {
+     transform: rotate(0deg);
+   }
+
+   100% {
+     transform: rotate(360deg);
+   }
+}
+
+.PostsScreen {
+   display: flex;
+ }
+ 
+ .PostsScreen .LeftPane {
+   flex: 4;
+ }
+ 
+ .PostsScreen .ContentPane {
+   flex: 7;
+   margin-left: 20px;
+   overflow-y: auto;
+   max-height: calc(100vh - 65px);
+   align-self: center;
+ }
+
+ .PostsScreen .ContentPane img {
+   position: fixed;
+   top: 0%;
+   right: 10%;
+   max-width: 100%;
+   max-height: calc(100vh - 80px);
+ }
+
+.select-post {
+   position: fixed;
+   top: 50%;
+   right: 25%;
+   color: #202020;
+}
+
+.ext-link {
+   position: fixed;
+   top: 50%;
+   right: 25%;
+   color: #202020;
+   text-align: center;
+}
+
+.NextScreen {
+   position: fixed;
+   top: 50%;
+   left: 70%;
+   width: 70px;
+   height: 70px;
+   border: 0;
+   cursor: pointer;
+   outline: none;
+   background-color: #fff;
+   border-radius: 50%;
+   transition: all 0.2s linear;
+   box-shadow: 0 0 50px #ebebeb;
+   font-size: 40px;
+   font-family: sans-serif;
+   align-items: center;
+}
+
+.NextScreen:hover {
+   transform: translateY(-10px);
+}
+
+.NextScreen:active {
+   background-color: #ebebeb;
+   transform: translateY(5px);
+}
+
+::-webkit-scrollbar-button {
+   /* background-image:url(''); */
+   background-repeat:no-repeat;
+   width:5px;
+   height:0px
+}
+ 
+::-webkit-scrollbar-track {
+   background-color:#ecedee
+}
+ 
+::-webkit-scrollbar-thumb {
+   -webkit-border-radius: 0px;
+   border-radius: 0px;
+   background-color:#6dc0c8;
+}
+ 
+::-webkit-scrollbar-thumb:hover{
+   background-color:#56999f;
+}
+ 
+::-webkit-resizer{
+ /* background-image:url(''); */
+   background-repeat:no-repeat;
+   width:4px;
+   height:0px
+}
+ 
+::-webkit-scrollbar{
+   width: 0;
+}
+
+::selection {
+   background: #56999f;
+   color: white;
+}
